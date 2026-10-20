@@ -5,10 +5,6 @@ plugins {
 group = "com.emotionfactry.dreambook"
 version = "0.0.0.1"
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     testImplementation(kotlin("test"))
 }
