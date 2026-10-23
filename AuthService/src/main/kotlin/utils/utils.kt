@@ -5,9 +5,12 @@ import org.slf4j.LoggerFactory
 import org.slf4j.MDC
 
 val log = LoggerFactory.getLogger("AuthService")
+
+/**
+ * Builds slf4j logger using xml set params
+ */
 fun createLogger() {
     val pid = ManagementFactory.getRuntimeMXBean().name.split("@").first()
     MDC.put("serviceType", "AUTH-SERVICE") // Кладем имя сервиса по ключу "serviceType"
     MDC.put("pid", pid)                    // Кладем вычисленный PID по ключу "pid"
 }
-

@@ -1,8 +1,14 @@
 package com.emotionfactry.dreambook.utils
 
+import java.security.KeyPair
+import java.security.KeyPairGenerator
+import java.security.spec.ECGenParameterSpec
 /**
- * This is an extension function for logging.
+ * Creates keypair used for JWT signing and verification. Should be used once.
+ * @return KeyPair containing private and public keys
  */
-fun <T> T.dbLog(tag: String, message: String) {
-    Log.i(tag, "${this!!::class.java.simpleName}, $message, ${Thread.currentThread().name} ")
+fun generateKeyPair(): KeyPair {
+    val generator = KeyPairGenerator.getInstance("EC")
+    generator.initialize(ECGenParameterSpec("secp256r1")) // Используем кривую p-256
+    return generator.generateKeyPair()
 }
