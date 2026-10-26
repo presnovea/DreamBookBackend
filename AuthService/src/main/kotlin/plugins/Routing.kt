@@ -9,7 +9,7 @@ import io.ktor.server.routing.routing
 import java.util.UUID
 
 fun Application.configureRouting() {
-    routing { authRoutes() }
+    routing { /*authRoutes()*/ }
 }
 fun ApplicationCall.userId(): UserId {
     val principal = authentication.principal<JWTPrincipal>()!!

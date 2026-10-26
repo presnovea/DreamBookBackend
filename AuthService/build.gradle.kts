@@ -27,4 +27,6 @@ dependencies {
     implementation(libs.logback.classic)
 
     testImplementation(libs.ktor.server.test.host)
+
+    implementation(project(":common:utils"))
 }

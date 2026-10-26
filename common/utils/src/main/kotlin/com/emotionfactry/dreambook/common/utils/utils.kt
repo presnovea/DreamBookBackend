@@ -1,8 +1,9 @@
-package com.emotionfactry.dreambook.utils
+package com.emotionfactry.dreambook.common.utils
 
 import java.security.KeyPair
 import java.security.KeyPairGenerator
 import java.security.spec.ECGenParameterSpec
+
 /**
  * Creates keypair used for JWT signing and verification. Should be used once.
  * @return KeyPair containing private and public keys
